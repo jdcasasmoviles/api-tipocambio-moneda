@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS CAMBIO (id INT NOT NULL AUTO_INCREMENT, monto NUMBER, moneda_origen VARCHAR(3),moneda_destino VARCHAR(3), tipo_cambio NUMBER,monto_tipo_cambio NUMBER,fecha_operacion VARCHAR(20) ,PRIMARY KEY (id));
