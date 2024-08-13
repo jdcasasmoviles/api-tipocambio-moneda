@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "03426316-c82c-4ea2-968e-79b82033ea9c",
+		"name": "API_TIPO_CAMBIO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cambio Tipo Monto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"monto\": 0,\r\n  \"monedaOrigen\": \"PEN\",\r\n  \"monedaDestino\": \"USD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/v1/cambio/tipoCambio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"v1",
+						"cambio",
+						"tipoCambio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista cambios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/v1/cambio/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"v1",
+						"cambio",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
