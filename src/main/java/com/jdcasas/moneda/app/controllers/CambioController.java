@@ -7,6 +7,7 @@ import com.jdcasas.moneda.app.domain.response.TipoCambioMonedaResponse;
 import com.jdcasas.moneda.app.entity.Cambio;
 import com.jdcasas.moneda.app.service.CambioService;
 import javax.validation.Valid;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,6 +15,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
+@CrossOrigin(origins = "http://127.0.0.1:4200")
 @RequestMapping("/v1/cambio")
 public class CambioController {
 	
@@ -30,8 +32,8 @@ public class CambioController {
 	}
 	
 	@GetMapping("/findAll")
-	public Flux<Cambio> findAllPosts() {
+	public Flux<Cambio>  listaCambios() {
 		return service.findAll();
 	}
-	
+
 }
